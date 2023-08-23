@@ -1,10 +1,3 @@
-
-<h1 align ="center">simple_shell :shell:</h1><br>
-<p align="center">
-<img src="https://cdn.shopify.com/s/files/1/0204/4104/products/20180517-20180517-P1260614_600x.jpg?v=1528506358">
-</p>
-<hr /> 
-
 ## Repository Description
 
 This repository contains the files to simulate a basic **Unix Shell** with its respective commands. It uses the POSIX API to implement many of the same functionalities of the first Ken Thompson's Shell and It is made to carry out the  **0x16. C - Simple Shell** project at [ALX Africa.](https://www.alxafrica.com/ "ALX Africa.")
@@ -87,40 +80,7 @@ This simple shell is a Shell interface written in C programming language that gi
 -   `write` (man 2 write)
 
 
-
-
-
-## Process Description
-
-The next steps are a brief description about how the shell works:
-
-1. First, the parent process is created when the user run the program.
-2. Then, the *isatty()* function using *STDIN_FILENO* file descriptor -fd- to tests if there is an open file descriptor referring to a terminal. If *isatty()* returns 1, the prompt is showed using *write()* with *STDOUT_FILENO* as fd and waits for an input user command line.
-3. When the user types a command, *getline()* function reads an entire line from the stream and *strtok()* function breaks the inputted command into a sequence of non-empty tokens.
-4. Next, it creates a separate child process suing *fork()* that performs the inputted command. Unless otherwise is specified, the parent process waits for the child to exit before continuing.
-5. After tokening the command, *execve()* function brings and executes it, the it frees all allocated memory with *free()*.
-6. Finally, the program returns to main process: prints the prompt, and waits for another user input.
-<p align="center">
-  <img  style="width: 100%; height: 900px"  src="https://user-images.githubusercontent.com/47532674/79399623-79bd2300-7f49-11ea-82b6-7d4f7576318d.png">
-</p>
-
-
-
-
-## Basic beggining
-
-To run this shell with its respective commands its necessary to clone this reposotory in your terminal. Do it like this:
-- HTTPS:
-
-```c
-git clone https://github.com/Parsankamusa/simple_shell.git
-```
-
-- SSH:
-
-```
-git clone git@github.com:Parsankamusa/simple_shell.git
-```
+`
 
 ## Compiling, Debugging and Runing
 
@@ -206,20 +166,6 @@ Contributions, issues, and feature requests are welcome!
 
 Feel free to check the [issues page](../../issues/).
 
-## Show your support
-
-Give a ⭐️ if you like this project!
 
 ## Known Bugs
-Currently no known bugs.
-
-
-## Authors:
-
-- *Musa Parsanka* - [@pasankamusa](https://github.com/pasankamusa) 
-- *Nicholas Gitobu*  - [@nickssilver](https://github.com/nickssilver)
-
-<p align="center">
-  <img src="https://assets.imaginablefutures.com/media/images/ALX_Logo.max-200x150.png" alt="ALX|Holberton School logo">
-</p>
-
+Currently no known bugs
