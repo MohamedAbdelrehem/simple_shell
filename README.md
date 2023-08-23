@@ -1,29 +1,26 @@
 ## Repository Description
 
-This repository contains the files to simulate a basic **Unix Shell** with its respective commands. It uses the POSIX API to implement many of the same functionalities of the first Ken Thompson's Shell and It is made to carry out the  **0x16. C - Simple Shell** project at [ALX Africa.](https://www.alxafrica.com/ "ALX Africa.")
+Welcome to our collaborative repository! We are **Mohamed Abdelrehem** and **Mustafa Nasser**, and this repository is where we simulate a basic **Unix Shell** with its respective commands. Our implementation uses the POSIX API to recreate the functionalities of the first Ken Thompson's Shell. This project was developed as a part of the **0x16. C - Simple Shell** project at [ALX Africa](https://www.alxafrica.com/ "ALX Africa").
 
-The predominantly used calls are **read**, **write**, **open**, **execve**, **exit**, **fflush**, **fork**, **free**, **malloc**, **getline**, **isatty**, **perror**, **strtok**, **wait**, and **waitpid**.
+We've utilized a variety of system calls including **read**, **write**, **open**, **execve**, **exit**, **fflush**, **fork**, **free**, **malloc**, **getline**, **isatty**, **perror**, **strtok**, **wait**, and **waitpid**.
 
-This simple shell is a Shell interface written in C programming language that gives to the user a prompt *Hell_Shell>> *, after it accepts, it executes a user inputted command in a separate process called child process.
-
-![C logo](https://seeklogo.com/images/C/c-programming-language-logo-9B32D017B1-seeklogo.com.png)
+Our simple shell provides a user-friendly interface, displaying the prompt *Hell_Shell>>* and executing user-inputted commands in separate child processes.
 
 ## Acknowledgments
 
-- ALX Community
-- Hat tip to anyone whose code was used
+We want to express our gratitude to the ALX Community for their support and guidance throughout this project. We also extend our thanks to anyone whose code we've referenced.
 
-## General.
+## General Guidelines
 
-- Allowed editors: `vi`, `vim`, `emacs`
-- All your files will be compiled on Ubuntu 14.04 LTS
-- Your programs and functions will be compiled with `gcc 4.8.4` using the flags `-Wall` `-Werror` `-Wextra` and `-pedantic`
-- All your files should end with a new line
-- A `README.md` file, at the root of the folder of the project is mandatory
-- Your code should use the `Betty` style. It will be checked using [betty-style.pl](https://github.com/holbertonschool/Betty/blob/master/betty-style.pl "betty-style.pl") and [betty-doc.pl](https://github.com/holbertonschool/Betty/blob/master/betty-doc.pl "betty-doc.pl")
-- Your shell should not have any memory leaks
+- Compatible editors: `vi`, `vim`, `emacs`
+- All files will be compiled on Ubuntu 14.04 LTS
+- Programs and functions will be compiled with `gcc 4.8.4` using flags such as `-Wall`, `-Werror`, `-Wextra`, and `-pedantic`
+- Every file should end with a new line
+- The presence of a mandatory `README.md` file at the root of the project folder
+- Code should adhere to the `Betty` style guidelines, which will be checked using [betty-style.pl](https://github.com/holbertonschool/Betty/blob/master/betty-style.pl) and [betty-doc.pl](https://github.com/holbertonschool/Betty/blob/master/betty-doc.pl)
+- Our shell must not have memory leaks
 - No more than 5 functions per file
-- All your header files should be include guarded
+- All header files should include include guards
 
 ## Requirements:
 
@@ -32,140 +29,132 @@ This simple shell is a Shell interface written in C programming language that gi
 * Compiler: [GCC 4.8.4](https://gcc.gnu.org/gcc-4.8/)
 
 ## Features:
-* This program displays a prompt and waits that the user types a command. A command line always ends with a new line (when user push *ENTER* key).
-* The prompt is displayed again each time a command has been executed.
-* When the user enters exit, *Hell shell* will end and returns the status 0.
-* When the user enters exit *[status]*, *Hell Shell* will end and returns the inputted status, where *status* is a value from 0 to 255. 
-* The user could stop the program using *Ctrl+D* (end of file).
-* The shell handles the command lines with arguments and pathways.
-* The program does not quit when the user imputs ^C (Ctrl+C).
-* The program prints the current enviroment when the user types *env*.
-* This program executes the most common shell commands as *ls*, *grep*, *find*, *pwd*, *rm*, *cp*, *mv*, *exit*, *env*, *history*, etc... with arguments.
-* If an executable cannot be found, It prints an error message and displays the prompt again.
-* This Shell supports commentaries using *#*, 
-* The *Hell Shell* does NOT support wildcard characters such as ls \*.dat in parameters (or commands).
-* This shell does NOT support pipes *|*, shell logical operators as *&& or ||*, neither commands separator *;*.
 
-### Allowed functions: 
--   `access` (man 2 access)
--   `chdir` (man 2 chdir)
--   `close` (man 2 close)
--   `closedir` (man 3 closedir)
--   `execve` (man 2 execve)
--   `exit` (man 3 exit)
--   `_exit` (man 2 _exit)
--   `fflush` (man 3 fflush)
--   `fork` (man 2 fork)
--   `free` (man 3 free)
--   `getcwd` (man 3 getcwd)
--   `getline` (man 3 getline)
--   `getpid` (man 2 getpid)
--   `isatty` (man 3 isatty)
--   `kill` (man 2 kill)
--   `malloc` (man 3 malloc)
--   `open` (man 2 open)
--   `opendir` (man 3 opendir)
--   `perror` (man 3 perror)
--   `read` (man 2 read)
--   `readdir` (man 3 readdir)
--   `signal` (man 2 signal)
--   `stat` (__xstat) (man 2 stat)
--   `lstat` (__lxstat) (man 2 lstat)
--   `fstat` (__fxstat) (man 2 fstat)
--   `strtok` (man 3 strtok)
--   `wait` (man 2 wait)
--   `waitpid` (man 2 waitpid)
--   `wait3` (man 2 wait3)
--   `wait4` (man 2 wait4)
--   `write` (man 2 write)
+Our shell offers a range of features, making it a versatile tool for users:
 
+* The prompt *Hell_Shell>>* is displayed, awaiting user input for commands. Each command line ends with a new line character (activated by pressing *ENTER*).
+* After executing a command, the prompt is displayed again.
+* Entering *exit* will terminate *Hell Shell* and return a status code of 0.
+* Typing *exit [status]* will end *Hell Shell* and return the inputted status, where *status* ranges from 0 to 255.
+* The program can be exited using *Ctrl+D* (end of file).
+* The shell effectively handles command lines containing arguments and pathways.
+* The program does not quit upon entering ^C (Ctrl+C).
+* Typing *env* prompts the program to display the current environment.
+* Our shell executes common shell commands like *ls*, *grep*, *find*, *pwd*, *rm*, *cp*, *mv*, *exit*, *env*, *history*, etc., along with their arguments.
+* In case an executable is not found, an error message is displayed and the prompt reappears.
+* Our shell supports commentaries using the *#* symbol.
+* Wildcard characters such as ls \*.dat in parameters (or commands) are NOT supported.
+* Pipes (*|*), shell logical operators (*&&* or *||*), and command separators (*;*) are NOT supported.
 
-`
+### Allowed Functions: 
+- `access` (man 2 access)
+- `chdir` (man 2 chdir)
+- `close` (man 2 close)
+- `closedir` (man 3 closedir)
+- `execve` (man 2 execve)
+- `exit` (man 3 exit)
+- `_exit` (man 2 _exit)
+- `fflush` (man 3 fflush)
+- `fork` (man 2 fork)
+- `free` (man 3 free)
+- `getcwd` (man 3 getcwd)
+- `getline` (man 3 getline)
+- `getpid` (man 2 getpid)
+- `isatty` (man 3 isatty)
+- `kill` (man 2 kill)
+- `malloc` (man 3 malloc)
+- `open` (man 2 open)
+- `opendir` (man 3 opendir)
+- `perror` (man 3 perror)
+- `read` (man 2 read)
+- `readdir` (man 3 readdir)
+- `signal` (man 2 signal)
+- `stat` (__xstat) (man 2 stat)
+- `lstat` (__lxstat) (man 2 lstat)
+- `fstat` (__fxstat) (man 2 fstat)
+- `strtok` (man 3 strtok)
+- `wait` (man 2 wait)
+- `waitpid` (man 2 waitpid)
+- `wait3` (man 2 wait3)
+- `wait4` (man 2 wait4)
+- `write` (man 2 write)
 
-## Compiling, Debugging and Runing
+## Compiling, Debugging, and Running
 
-- All of your and our programs and functions will be compiled with `gcc 4.8.4` using the flags `-Wall` `-Werror` `-Wextra` and `-pedantic`
+- All programs and functions will be compiled with `gcc 4.8.4` using flags like `-Wall`, `-Wextra`, `-Werror`, and `-pedantic`
 
-- To **compile** your functions use: `
+- To **compile** functions, use the following command:
 
-```
+```shell
 gcc -Wall -Wextra -Werror -pedantic -Wno-format -g *.c -o Hell_Shell
 ```
-- If you want to **debugging** the shell, use valgrind:
-```
+
+- For **debugging** the shell, utilize valgrind:
+
+```shell
 valgrind --leak-check=full ./Hell_Shell
 ```
-- Or just **run** and try this shell using:
-```
+
+- To **run** the shell, execute:
+
+```shell
 ./Hell_Shell
 ```
-- This program provides a simple manual to know and get familiar with the shell. Open it by typing: 
-```
+
+- For an in-depth manual on our shell, type:
+
+```shell
 man ./man_1_simple_shell
 ```
 
 ## Examples
 
-Here are shown some examples of the usage of the Shell:
+Here are a few examples showcasing the usage of our Hell Shell:
 
-- ls
+- Running *ls* command:
 
 ```shell
 Hell_Shell>> ls
 AUTHORS  Hell_Shell  README.md auxiliar_functions.c  create_child.c  dir  execute.c  free_mem.c  generateAUTHORS  man_1_simple_shell  shell.h shell_init.c  tokening.c
 ```
 
+- Providing the full path for the *ls* command:
+
 ```shell
 Hell_Shell>> /bin/ls
 AUTHORS  Hell_Shell  README.md	auxiliar_functions.c  create_child.c  dir  execute.c  free_mem.c  generateAUTHORS  man_1_simple_shell  shell.h shell_init.c  tokening.c
 ```
+
+- Running *ls* with additional flags:
 
 ```shell
 Hell_Shell>> ls -lat
 total 88
 drwxrwxr-x 4 vagrant vagrant  4096 Apr 16 17:04 .
 -rw-rw-r-- 1 vagrant vagrant  5502 Apr 16 17:04 README.md
-drwxrwxr-x 2 vagrant vagrant  4096 Apr 16 12:15 dir
-drwxrwxr-x 8 vagrant vagrant  4096 Apr 16 00:20 .git
--rw-rw-r-- 1 vagrant vagrant  1964 Apr 15 23:17 shell_init.c
--rw-rw-r-- 1 vagrant vagrant   821 Apr 15 23:17 tokening.c
--rw-rw-r-- 1 vagrant vagrant   756 Apr 15 23:17 free_mem.c
--rw-rw-r-- 1 vagrant vagrant  1911 Apr 15 23:17 shell.h
--rw-rw-r-- 1 vagrant vagrant   702 Apr 15 23:17 create_child.c
--rw-rw-r-- 1 vagrant vagrant  2364 Apr 15 23:17 execute.c
--rwxrwxr-x 1 vagrant vagrant 21729 Apr 15 23:17 Hell_Shell
--rw-rw-r-- 1 vagrant vagrant  1682 Apr 15 23:17 auxiliar_functions.c
--rw-rw-r-- 1 vagrant vagrant  2600 Apr 14 18:25 man_1_simple_shell
--rwxrwxr-x 1 vagrant vagrant   392 Apr 13 14:46 generateAUTHORS
--rw-rw-r-- 1 vagrant vagrant   156 Apr 13 14:46 AUTHORS
-drwxrwxr-x 7 vagrant vagrant  4096 Apr  6 18:22 ..
+...
 ```
-- pwd
+
+- Checking the current working
+
+ directory with *pwd*:
 
 ```shell
 Hell_Shell>> pwd
 /home/vagrant/HOLBERTON/simple_shell
 ```
-- echo
+
+- Using the *echo* command:
 
 ```shell
 Hell_Shell>> echo Hello World
 Hello World
 ```
-- *Ctrl+D*  and  *Ctrl+C* 
+
+- Exiting the shell using *Ctrl+D* and *Ctrl+C*:
 
 ```shell
 Hell_Shell>> ^C
 Hell_Shell>> 
 vagrant@vagrant-ubuntu-trusty-64:~/HOLBERTON/simple_shell$ 
 ```
-Node that in the second line the *Ctrl+C*  is typed
-## 🤝 Contributing
-
-Contributions, issues, and feature requests are welcome!
-
-Feel free to check the [issues page](../../issues/).
-
-
-## Known Bugs
-Currently no known bugs
